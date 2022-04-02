@@ -1,24 +1,35 @@
 #include "AllLibraries.h"
 #include "MyCollection.h"
-#include "Queue.h"
 #include "Sorter.h"
-#include "Stack.h"
-#include "String.h"
 #include "Vector.h"
 #include "SinglyLinkedList.h"
 #include "DoublyLinkedList.h"
 
 int main()
 {
-	SinglyLinkedList a;
-	a.AddToHead(1);
-	a.AddToHead(2);
-	a.AddToHead(3);
-	a.AddToHead(4);
-	a.AddToHead(5);
-	a.Print();
-	MyCollection <SinglyLinkedList> test1;
-	test1.Add(a);
-	test1.Print();
+	/*MyCollection<int>* a = new SinglyLinkedList;
+	a->Add(10);
+	a->Add(15);
+	a->Add(20);
+	cout << a->GetCount() << "\n";
+	a->Print();*/
+	/*MyCollection<int>* b = new DoublyLinkedList;
+	b->Add(25);
+	b->Add(30);
+	b->Add(35);
+	b->Add(35);
+	b->Print();
+	cout << b->GetCount() << "\n";*/
+	/*MyCollection<int>* c = new Vector<int>(10);
+	c->Add(40);
+	c->Add(45);
+	c->Add(50);
+	c->Add(55);
+	c->Add(60);
+	c->Print();
+	c->Remove();
+	c->Print();
+	c->Replace(80, 2);
+	c->Print();*/
 	return 0;
 }

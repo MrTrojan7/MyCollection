@@ -2,7 +2,7 @@
 #include "AllLibraries.h"
 #include "Sorter.h"
 #include "MyCollection.h"
-class SinglyLinkedList : public MyCollection <int>
+class SinglyLinkedList : public MyCollection<int>
 {
 public:
 	struct Node
@@ -20,7 +20,7 @@ private:
 	void ToList(int* arr);
 	void Shuffle(int* arr);
 public:
-	void Add(int data);
+	void Add(int data) ;
 	void Remove();
 	int Search(int data);
 	void Replace(int value, int index);
@@ -34,7 +34,7 @@ public:
 	void DeleteFromTail();
 	void DeleteByIndex(int position);
 	void Clear();
-	void Print();
+	void Print() const;
 	int GetCount() const;
 	int IndexOf(int data) const;
 	int LastIndexOf(int data) const;

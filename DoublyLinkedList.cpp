@@ -234,6 +234,31 @@ int DoublyLinkedList::GetCount() const
 	return count;
 }
 
+void DoublyLinkedList::Add(int value)
+{
+	AddToHead(value);
+}
+
+void DoublyLinkedList::Remove()
+{
+	DeleteFromHead();
+}
+
+int DoublyLinkedList::Search(int data)
+{
+	return IndexOf(data);
+}
+
+void DoublyLinkedList::Replace(int value, int num)
+{
+	SetAt(value, num);
+}
+
+void DoublyLinkedList::Sort()
+{
+	SortAsc();
+}
+
 int DoublyLinkedList::IndexOf(int data) const
 {
 	if (IsEmpty())

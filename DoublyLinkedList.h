@@ -1,7 +1,8 @@
 #pragma once
 #include "AllLibraries.h"
 #include "Sorter.h"
-class DoublyLinkedList
+#include "MyCollection.h"
+class DoublyLinkedList : public MyCollection<int>
 {
 
 public:
@@ -60,6 +61,12 @@ private:
 	}
 	
 public:
+	void Add(int value);
+	void Remove();
+	int Search(int data);
+	void Replace(int value, int num);
+	void Sort();
+
 	void AddToHead(int data);
 	void AddToTail(int data);
 	void Insert(int data, int position);

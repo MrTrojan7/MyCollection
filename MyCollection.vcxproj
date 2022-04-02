@@ -142,21 +142,14 @@
     <ClInclude Include="AllLibraries.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="MyCollection.h" />
-    <ClInclude Include="Queue.h" />
     <ClInclude Include="SinglyLinkedList.h" />
     <ClInclude Include="Sorter.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="String.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DoublyLinkedList.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Queue.cpp" />
     <ClCompile Include="SinglyLinkedList.cpp" />
-    <ClCompile Include="Stack.cpp" />
-    <ClCompile Include="String.cpp" />
-    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

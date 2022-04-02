@@ -165,7 +165,7 @@ void SinglyLinkedList::Clear()
 	}
 }
 
-void SinglyLinkedList::Print() 
+void SinglyLinkedList::Print() const
 {
 	if (IsEmpty())
 	{

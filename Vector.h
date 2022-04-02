@@ -1,10 +1,11 @@
 #pragma once
 #include "AllLibraries.h"
 #include "Sorter.h"
+#include "MyCollection.h"
 
 template <class T>
 
-class Vector
+class Vector : public MyCollection<T>
 {
 private:
 	T* _arr;
@@ -16,6 +17,16 @@ private:
 	void ReallocationArray(const bool flag, unsigned int const index, const T& value);
 	void CheckIndex(unsigned int const index);
 public:
+	int GetCount() const;
+	void Add(T value);
+	void Remove();
+	void Print() const;
+	T Search(T data);
+	void Replace(T value, int num);
+	void Sort();
+
+	///////////////////
+
 	bool IsFoundElem(T& elem);
 	unsigned int GetSize() const;
 	unsigned int GetCapacity() const;
@@ -53,7 +64,6 @@ public:
 	const int const LastIndexOf(const T& value) const;
 	void Clone(Vector<T>& vector);
 	~Vector();
-	void Print();
 };
 
 template<class T>
@@ -219,6 +229,24 @@ inline void Vector<T>::CheckIndex(unsigned int const index) // Check Index
 	{
 		throw "error! bad index!";
 	}
+}
+
+template<class T>
+inline int Vector<T>::GetCount() const
+{
+	return _capacity;
+}
+
+template<class T>
+inline void Vector<T>::Add(T value)
+{
+	PushBack(value);
+}
+
+template<class T>
+inline void Vector<T>::Remove()
+{
+	PopBack();
 }
 
 template<class T>
@@ -456,7 +484,7 @@ inline Vector<T>::~Vector() // DEST
 }
 
 template<class T>
-inline void Vector<T>::Print() // Print
+inline void Vector<T>::Print() const // Print
 {
 	if (IsEmpty())
 	{
@@ -470,5 +498,24 @@ inline void Vector<T>::Print() // Print
 			cout << "\n";
 	}
 	cout << "\n";
+}
+
+template<class T>
+inline T Vector<T>::Search(T data)
+{
+	return IndexOf(data);
+}
+
+template<class T>
+inline void Vector<T>::Replace(T value, int num)
+{
+	RemoveAt(num);
+	Insert(value, num);
+}
+
+template<class T>
+inline void Vector<T>::Sort()
+{
+	SortAsc();
 }
 
